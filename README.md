@@ -1,27 +1,121 @@
-# AgendaTarefas
+# 🗂️ AgendaTarefas — Task Management App (Work in Progress)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.17.
+AgendaTarefas is a **task-management web application** built with **Angular**, designed to help users organize daily activities in a simple and intuitive way.  
+This project is currently **under active development** 🏗️ and new features are added frequently.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## ✨ Current Status
 
-## Code scaffolding
+🚧 **The project is still in construction** — core functionalities are being implemented gradually.  
+At the moment, the application contains the basic structure of an Angular project and initial components for managing tasks.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+## 🎯 Project Goals
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+The goal of AgendaTarefas is to provide a clean and efficient environment where users can:
 
-## Running unit tests
+- 📌 Create tasks  
+- ✏️ Edit or update tasks  
+- ❌ Delete tasks  
+- ✔️ Mark tasks as completed  
+- 📅 Organize daily routines  
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+These features are being developed iteratively as part of the expansion of the application.
 
-## Running end-to-end tests
+---
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## 🔧 Features Under Development
 
-## Further help
+These functionalities are planned or already being implemented:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### ✔️ Planned Features  
+- **Task list interface** with real-time updates  
+- **Local data storage** (LocalStorage or simple API)  
+- **Task priority levels** (High, Medium, Low)  
+- **Deadlines and reminders**  
+- **Task categories** (Work, Home, Study, etc.)  
+- **User-friendly UI** with responsive layout  
+- **Dark mode 🌙**  
+- **Search and filter tools**  
+- **Animations and transitions**  
+
+### 🔜 Future Enhancements  
+- Cloud synchronization  
+- Multi-user accounts  
+- Mobile version / PWA support  
+- Drag-and-drop task ordering  
+
+---
+
+## 🏗️ Technologies Used
+
+- **Angular CLI 17.3.17**  
+- **TypeScript**  
+- **HTML5 + CSS3**  
+- **RxJS**  
+- **Node.js (for development environment)**  
+
+---
+
+# 🇧🇷 **Versão em Português
+
+AgendaTarefas é uma **aplicação web de gerenciamento de tarefas** desenvolvida em **Angular**, criada para ajudar usuários a organizar suas atividades diárias de forma simples e eficiente.  
+O projeto está **em desenvolvimento ativo** 🏗️ e novas funcionalidades são adicionadas constantemente.
+
+---
+
+## ✨ Estado Atual
+
+🚧 **O projeto ainda está em construção** — as funcionalidades principais estão sendo implementadas aos poucos.  
+No momento, o aplicativo possui a estrutura base do Angular e componentes iniciais relacionados ao gerenciamento de tarefas.
+
+---
+
+## 🎯 Objetivos do Projeto
+
+A proposta do AgendaTarefas é oferecer um ambiente limpo e fácil de usar, permitindo que o usuário:
+
+- 📌 Crie tarefas  
+- ✏️ Edite ou atualize tarefas  
+- ❌ Exclua tarefas  
+- ✔️ Marque tarefas como concluídas  
+- 📅 Organize rotinas diárias  
+
+Esses recursos estão sendo desenvolvidos gradualmente.
+
+---
+
+## 🔧 Funcionalidades em Desenvolvimento
+
+Estas funcionalidades estão planejadas ou já em implementação:
+
+### ✔️ Funcionalidades Planejadas  
+- **Interface de lista de tarefas** com atualização automática  
+- **Armazenamento local** (LocalStorage ou API simples)  
+- **Níveis de prioridade** (Alta, Média, Baixa)  
+- **Datas e lembretes**  
+- **Categorias de tarefas** (Trabalho, Casa, Estudos, etc.)  
+- **Interface responsiva** e amigável  
+- **Modo escuro 🌙**  
+- **Ferramentas de busca e filtro**  
+- **Animações** e transições suaves  
+
+### 🔜 Futuras Expansões  
+- Sincronização em nuvem  
+- Suporte a múltiplos usuários  
+- Versão mobile / PWA  
+- Ordenação das tarefas por *drag-and-drop*  
+
+---
+
+## 🏗️ Tecnologias Utilizadas
+
+- **Angular CLI 17.3.17**  
+- **TypeScript**  
+- **HTML5 e CSS3**  
+- **RxJS**  
+- **Node.js (para ambiente de desenvolvimento)**  
+
+---
