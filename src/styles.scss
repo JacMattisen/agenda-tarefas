@@ -23,17 +23,3 @@ body {
 .padding-g {
   padding: 24px !important;
 }
-
-/* No seu styles.scss */
-
-/* Estilos de borda e cor de fundo */
-.mat-form-field-appearance-outline.full-width {
-  border-radius: 14px;
-  background: #ffffff;
-}
-.mat-form-field-appearance-outline .mat-form-field-outline {
-  border-radius: 14px;
-  border-color: #d3dce6;
-  transition: all 0.2s ease-in-out;
-}
-/* ... e assim por diante para todos os seletores internos ... */
