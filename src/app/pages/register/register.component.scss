@@ -23,13 +23,10 @@ mat-card-title {
   color: #2a4c7b;
 }
 
-/* ================================ */
-/* INPUTS ESTILO MODERNO             */
-/* ================================ */
 .custom-input {
   border-radius: 14px;
   background: #ffffff;
-  margin-bottom: 16px; /* espaçamento entre inputs */
+  margin-bottom: 16px;
 }
 
 .custom-input.mat-form-field-appearance-outline .mat-form-field-outline {
@@ -43,9 +40,6 @@ mat-card-title {
   box-shadow: 0 0 6px rgba(105, 169, 255, 0.25);
 }
 
-/* ================================ */
-/* BOTÃO REGISTER                    */
-/* ================================ */
 .register-btn {
   border-radius: 14px;
   background: #e9f4ff;
@@ -55,7 +49,7 @@ mat-card-title {
   border: 1px solid #bcdcff;
   font-size: 16px;
   transition: all 0.25s ease;
-  margin-top: 8px; /* espaçamento em cima do botão */
+  margin-top: 8px;
 }
 
 .register-btn:hover {
