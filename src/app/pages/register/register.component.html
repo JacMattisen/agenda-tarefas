@@ -5,21 +5,38 @@
     </mat-card-header>
 
     <mat-card-content>
-      <mat-form-field class="full-width custom-input" appearance="outline">
-        <mat-label>Complete Name</mat-label>
-        <input matInput placeholder="Enter your full name" />
-      </mat-form-field>
+      <form [formGroup]="form">
+        <mat-form-field class="full-width custom-input" appearance="outline">
+          <mat-label>Complete Name</mat-label>
+          <input
+            matInput
+            formControlName="fullName"
+            placeholder="Enter your full name"
+          />
+        </mat-form-field>
 
-      <mat-form-field class="full-width custom-input" appearance="outline">
-        <mat-label>E-mail</mat-label>
-        <input matInput placeholder="Enter your email" />
-      </mat-form-field>
+        <mat-form-field class="full-width custom-input" appearance="outline">
+          <mat-label>E-mail</mat-label>
+          <input
+            matInput
+            formControlName="email"
+            placeholder="Enter your email"
+          />
+        </mat-form-field>
 
-      <input-password-field class="full-width"></input-password-field>
+        <input-password-field
+          class="full-width"
+          [control]="passwordControl"
+        ></input-password-field>
+      </form>
     </mat-card-content>
 
     <mat-card-actions>
-      <button mat-raised-button class="full-width register-btn">
+      <button
+        mat-raised-button
+        class="full-width register-btn"
+        (click)="submit()"
+      >
         REGISTER
       </button>
     </mat-card-actions>
