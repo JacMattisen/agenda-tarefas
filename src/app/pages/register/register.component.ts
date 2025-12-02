@@ -11,8 +11,9 @@ import {
   FormGroup,
   FormControl,
   FormBuilder,
+  Validators,
 } from '@angular/forms';
-
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-register',
   standalone: true,
@@ -25,6 +26,8 @@ import {
     MatIcon,
     PasswordFieldComponent,
     ReactiveFormsModule,
+
+    CommonModule,
   ],
   templateUrl: './register.component.html',
   styleUrl: './register.component.scss',
@@ -34,8 +37,8 @@ export class RegisterComponent {
 
   constructor(private formBuilder: FormBuilder) {
     this.form = this.formBuilder.group({
-      fullName: [''],
-      email: [''],
+      fullName: ['', [Validators.required, Validators.minLength(3)]],
+      email: ['', [Validators.required, Validators.email]],
       password: [''],
     });
   }
@@ -45,6 +48,10 @@ export class RegisterComponent {
   }
 
   submit() {
+    if (this.form.invalid) {
+      this.form.markAllAsTouched();
+      return;
+    }
     console.log(this.form.value);
   }
 }
