@@ -13,12 +13,12 @@
             formControlName="fullName"
             placeholder="Enter your full name"
           />
-          <mat-error *ngIf="form.get('fullName')?.hasError('required')">
-            Name is required
-          </mat-error>
-          <mat-error *ngIf="form.get('fullName')?.hasError('minlength')">
-            Name must be at least 3 characters long
-          </mat-error>
+
+          @if(form.get('fullName')?.errors?.['required']){
+          <mat-error> Name is required </mat-error>
+          } @if(fullNameErros){
+          <mat-error>{{ fullNameErros }}</mat-error>
+          }
         </mat-form-field>
 
         <mat-form-field class="full-width custom-input" appearance="outline">
@@ -28,12 +28,12 @@
             formControlName="email"
             placeholder="Enter your email"
           />
-          <mat-error *ngIf="form.get('email')?.hasError('required')">
-            Email is required
-          </mat-error>
-          <mat-error *ngIf="form.get('email')?.hasError('email')">
-            Please enter a valid email address
-          </mat-error>
+
+          @if(form.get('email')?.errors?.['required']){
+          <mat-error> Email is required </mat-error>
+          } @if(emailErros){
+          <mat-error> {{ emailErros }}</mat-error>
+          }
         </mat-form-field>
 
         <input-password-field

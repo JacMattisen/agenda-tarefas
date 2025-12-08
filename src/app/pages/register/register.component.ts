@@ -13,7 +13,7 @@ import {
   FormBuilder,
   Validators,
 } from '@angular/forms';
-import { CommonModule } from '@angular/common';
+
 @Component({
   selector: 'app-register',
   standalone: true,
@@ -26,8 +26,6 @@ import { CommonModule } from '@angular/common';
     MatIcon,
     PasswordFieldComponent,
     ReactiveFormsModule,
-
-    CommonModule,
   ],
   templateUrl: './register.component.html',
   styleUrl: './register.component.scss',
@@ -45,6 +43,30 @@ export class RegisterComponent {
 
   get passwordControl(): FormControl {
     return this.form.get('password') as FormControl;
+  }
+
+  get fullNameErros(): string | null {
+    const control = this.form.get('fullName');
+    if (control?.hasError('required')) {
+      return 'Name is required';
+    }
+    if (control?.hasError('minlength')) {
+      return 'Name must be at least 3 characters long';
+    }
+
+    return null;
+  }
+
+  get emailErros(): string | null {
+    const emailControl = this.form.get('email');
+    if (emailControl?.hasError('required')) {
+      return 'Email is required';
+    }
+    if (emailControl?.hasError('email')) {
+      return 'Please enter a valid email address';
+    }
+
+    return null;
   }
 
   submit() {
