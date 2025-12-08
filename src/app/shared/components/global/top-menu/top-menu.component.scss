@@ -1,0 +1,26 @@
+.app-top-menu-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app-top-menu-toolbar .logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.app-top-menu-toolbar .logo-img {
+  height: 50px;
+  width: auto;
+  max-width: 100%;
+  display: block;
+}
+
+.app-top-menu-toolbar .spacer {
+  flex: 1 1 auto;
+}
+
+.app-top-menu-toolbar button {
+  height: 100%;
+}
