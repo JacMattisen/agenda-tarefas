@@ -14,9 +14,7 @@
             placeholder="Enter your full name"
           />
 
-          @if(form.get('fullName')?.errors?.['required']){
-          <mat-error> Name is required </mat-error>
-          } @if(fullNameErros){
+          @if(fullNameErros){
           <mat-error>{{ fullNameErros }}</mat-error>
           }
         </mat-form-field>
@@ -29,9 +27,7 @@
             placeholder="Enter your email"
           />
 
-          @if(form.get('email')?.errors?.['required']){
-          <mat-error> Email is required </mat-error>
-          } @if(emailErros){
+          @if(emailErros){
           <mat-error> {{ emailErros }}</mat-error>
           }
         </mat-form-field>

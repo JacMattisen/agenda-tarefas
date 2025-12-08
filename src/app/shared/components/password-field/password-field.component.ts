@@ -29,6 +29,18 @@ export class PasswordFieldComponent {
 
   @Input({ required: true }) control!: FormControl;
 
+  get passwordErrors(): string | null {
+    const passwordControl = this.control;
+    if (passwordControl?.hasError('required')) {
+      return 'Password is required';
+    }
+    if (passwordControl?.hasError('minlength')) {
+      return 'Password must be at least 6 characters long';
+    }
+
+    return null;
+  }
+
   clickEvent(event: MouseEvent) {
     this.hide.set(!this.hide());
     event.stopPropagation();
