@@ -1,0 +1,53 @@
+<div class="register-component">
+  <mat-card>
+    <mat-card-header class="padding-m">
+      <mat-card-title>User Registration</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <form [formGroup]="form">
+        <mat-form-field class="full-width custom-input" appearance="outline">
+          <mat-label>Complete Name</mat-label>
+          <input
+            matInput
+            formControlName="fullName"
+            placeholder="Enter your full name"
+          />
+
+          @if(fullNameErros){
+          <mat-error>{{ fullNameErros }}</mat-error>
+          }
+        </mat-form-field>
+
+        <mat-form-field class="full-width custom-input" appearance="outline">
+          <mat-label>E-mail</mat-label>
+          <input
+            matInput
+            formControlName="email"
+            placeholder="Enter your email"
+          />
+
+          @if(emailErros){
+          <mat-error> {{ emailErros }}</mat-error>
+          }
+        </mat-form-field>
+
+        <input-password-field
+          class="full-width"
+          [control]="passwordControl"
+        ></input-password-field>
+      </form>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button
+        mat-raised-button
+        class="full-width register-btn"
+        (click)="submit()"
+        [disabled]="form.invalid"
+      >
+        REGISTER
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

@@ -1,0 +1,19 @@
+<mat-toolbar class="app-top-menu-toolbar">
+  <span class="logo">
+    <a routerLink="/"
+      ><img [src]="appLogo" alt="App Logo" class="logo-img"
+    /></a>
+  </span>
+
+  <span class="spacer"></span>
+
+  <a mat-button>Prices</a>
+  <a mat-button>Contact</a>
+
+  <span class="spacer"></span>
+
+  <button mat-button>Enter</button>
+  <button mat-flat-button color="primary" routerLink="/register">
+    Register
+  </button>
+</mat-toolbar>
