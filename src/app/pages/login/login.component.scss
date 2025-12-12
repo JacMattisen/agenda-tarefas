@@ -1,5 +1,5 @@
 /* Fundo geral */
-.register-component {
+.login-component {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,7 +38,7 @@
   box-shadow: 0 0 6px rgba(105, 169, 255, 0.25);
 }
 
-.register-btn {
+.login-btn {
   border-radius: 14px;
   background: #e9f4ff;
   color: #368dff;
@@ -50,7 +50,7 @@
   margin-top: 8px;
 }
 
-.register-btn:hover {
+.login-btn:hover {
   background: #d7eaff;
   color: #1a74e8;
 }

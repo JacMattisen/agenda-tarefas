@@ -13,6 +13,7 @@ import {
   FormBuilder,
   Validators,
 } from '@angular/forms';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-register',
@@ -29,13 +30,17 @@ import {
   ],
   templateUrl: './register.component.html',
   styleUrl: './register.component.scss',
+  //encapsulation: ViewEncapsulation.None, DEPOIS VER ONDE ELE É USADO
 })
 export class RegisterComponent {
   form: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(
+    private formBuilder: FormBuilder,
+    private userService: UserService
+  ) {
     this.form = this.formBuilder.group({
-      fullName: ['', [Validators.required, Validators.minLength(3)]],
+      name: ['', [Validators.required, Validators.minLength(3)]],
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
     });
@@ -46,7 +51,7 @@ export class RegisterComponent {
   }
 
   get fullNameErros(): string | null {
-    const control = this.form.get('fullName');
+    const control = this.form.get('name');
     if (control?.hasError('required')) {
       return 'Name is required';
     }
@@ -74,6 +79,16 @@ export class RegisterComponent {
       this.form.markAllAsTouched();
       return;
     }
-    console.log(this.form.value);
+
+    const formData = this.form.value;
+
+    this.userService.register(formData).subscribe({
+      next: (response) => {
+        console.log('Registration successful', response);
+      },
+      error: (error) => {
+        console.error('Registration failed', error);
+      },
+    });
   }
 }
